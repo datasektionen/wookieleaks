@@ -1697,7 +1697,7 @@ a:hover {
       display: inline-block;
       margin: 0; }
   .top-navigation .nav-logo {
-    background: url("/static/img/wl-logo.png") 0% 50% no-repeat;
+    background: #FFFFFF 5% 50% no-repeat;
     background-size: 1.4em;
     display: inline-block;
     float: left;
