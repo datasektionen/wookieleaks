@@ -13,7 +13,7 @@ Eftersom syftet med vissa filer i denna mapp är lite oklart, kommer här den in
 ### Nödvändiga filer
 Hemsidan består av två sidor, startsidan och sidan som visar ritningarna. Till detta behövs en del nödvändiga filer:
 
-- `styles.css` - Formatterar båda sidorna på ett snyggt sätt (tagen direkt från wikieleaks och innehåller massa onödiga delar)
+- `styles.css` - Formatterar båda sidorna på ett snyggt sätt (tagen direkt från [WikiLeaks](https://wikileaks.org/) och innehåller massa onödiga delar)
 - `index.html` - Koden för själva startsidan
 - `ritningar/` - En mapp med kod och bilder som enbart används till sidan som visar ritningarna.
 - Bilder som behövs på båda sidor
@@ -21,9 +21,29 @@ Hemsidan består av två sidor, startsidan och sidan som visar ritningarna. Till
 ### (fd.) oklara filer
 Tyvärr finns en del saker vars historia har försvunnit från mottagningspersonalen.
 
-`.static` och `.env` är filer för depedencies som används för att bygga sidan. Även om de är tomma så fyller de en viktig funktion, troligen. 
+`.static` är en fil för depedencies som används för att bygga sidan. Även om den är tom så fyller de en viktig funktion, troligen. (Ja den fyller en viktig funktion /d-sys 21/22, se nedan) 
 
 Den gamla filen `wookieleaks.html` är borttagen. Om den mot all förmodan skulle behövas, reverta tillbaka denna commit. 
 
 ## Hur deployar man sidan?
 Har du gjort uppdateringar av hemsidan och vill få dem att faktiskt köras? Släng iväg ett mail till datasektionens systemansvariga (d-sys@d.kth.se) och be hen deploya sidan. Fungerade i alla fall 2019.
+
+## Instruktioner för att deploya
+Skriven av Axel Elmarsson, d-sys 21/22.
+
+Som skrivet ovan, kontakta systemansvarig för att deploya. Dessa instruktioner är till för hen om det behövs.
+
+Tidigare användes ett [annat](https://github.com/florianheinemann/buildpack-nginx.git) buildpaket, dock uppstod problem vid deployment 2021. Därför tog jag bort detta buildpaket och använde herokus standardbuildpaket. `.static`-filen existerar för att dokku ska förstå att hemsidan är en statisk hemsida.
+
+1. Klona repot
+1. Kör `git push dokku@sips.datasektionen.se:wookieleaks.org`
+1. Stäng av uppgradering av HTTP till HTTPS i Cloudflare, detta behövs för att kunna lägga till certifikat och "ge" sidan HTTPS.
+    - Detta görs under SSL/TLS och "Always use HTTPS". Sätt den till `Off` TEMPORÄRT.
+1. Anslut till sips (`ssh namn@sips.datasektionen.se`)
+1. På sips, kör `dokku letsencrypt:enable wookieleaks.org`
+1. Aktivera uppgradering av HTTP till HTTPS igen i Cloudflare.
+
+Detta bör vara allt som behövs göra för att deploya wookieleaks, det fungerade i alla fall 2021. Fråga någon gammal annars...
+
+### DNS:en
+Jag vet i skrivande stund inte vem det är som sköter DNS:en för wookieleaks. Den pekar i alla fall på sips, och måste därför deployas på sips :/ Antar att det är någon gammal räv som äger DNS:en...
