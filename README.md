@@ -45,7 +45,7 @@ Tidigare användes ett [annat](https://github.com/florianheinemann/buildpack-ngi
 
 Detta bör vara allt som behövs göra för att deploya wookieleaks, det fungerade i alla fall 2021. Fråga någon gammal annars...
 
-För att ta need wookieleaks efter hurry scurryn, kör `dokku apps:destroy wookieleaks.org`
+För att ta ned wookieleaks efter hurry scurryn, kör `dokku apps:destroy wookieleaks.org`
 
 ### DNS:en
 Jag vet i skrivande stund inte vem det är som sköter DNS:en för wookieleaks. Den pekar i alla fall på sips, och måste därför deployas på sips :/ Antar att det är någon gammal räv som äger DNS:en...
