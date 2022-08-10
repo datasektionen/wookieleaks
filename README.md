@@ -5,7 +5,8 @@ Koden är inprincip en direkt kopia av Wikieleaks startsida, med vissa delar bor
 Detta repo är ett hopkok av flera års klipp och klistrande under tidspress. Därför finns stor potential att uppdatera strukturen på detta repo och rensa bort gammalt skräp.
 
 > OBS!
-> Eftersom startsidan har små nyhetsavsnitt på sig som har datum till sig, bör man troligtvis vilja uppdatera dessa datum varje år. Annars kanske man avslöjar att Hurry Scurry varit en het grej sedan flera år tillbaka.
+> ~~Eftersom startsidan har små nyhetsavsnitt på sig som har datum till sig, bör man troligtvis vilja uppdatera dessa datum varje år. Annars kanske man avslöjar att Hurry Scurry varit en het grej sedan flera år tillbaka.~~
+> Finns nu ett script som uppdaterar året till nuvarande år. Däremot måste man kanske uppdatera datumet för "Dödsstjänrans ritningar" så det är <= dagens datum. Detta görs i på två ställen: [index.html](index.html) och [ritningar/index.html](ritningar/index.html)
 
 ## Vad finns här?
 Eftersom syftet med vissa filer i denna mapp är lite oklart, kommer här den information som finns angående de olika sakerna i detta repo.

@@ -55,7 +55,7 @@
                 <p>Den kanske viktigaste läckan genom tiderna har nyligen nått oss på Wookieleaks. Vi har fått tillgång
                   till ritningar över Dödsstjärnan!</p>
               </div>
-              <div class="timestamp art695">2021-08-18</div>
+              <div class="timestamp art695">YYYY-08-18</div>
             </div>
           </a>
         </li>
@@ -69,7 +69,7 @@
                 <p>Det går rykten om att en av de stora smugglingscheferna alltid bär hatt... Det är för övrigt välkänt
                   att han gillar att ljuga och spela kort.</p>
               </div>
-              <div class="timestamp art694">2021-06-15</div>
+              <div class="timestamp art694">YYYY-06-15</div>
             </div>
           </a>
         </li>
@@ -84,7 +84,7 @@
                   för ett tag sen. Källan som avslöjade detta är en fett cool person, det vill säga lika cool som Jabba
                   är fet.</p>
               </div>
-              <div class="timestamp art693">2021-08-03</div>
+              <div class="timestamp art693">YYYY-08-03</div>
             </div>
           </a>
         </li>
@@ -92,5 +92,11 @@
     </div>
   </div>
 </body>
-
+<script>
+  let year = new Date().getFullYear();
+  const elements = document.getElementsByClassName("timestamp");
+  [].forEach.call(elements, function (e) {
+    e.innerHTML = e.innerHTML.replace("YYYY", year);
+  })
+</script>
 </html>
