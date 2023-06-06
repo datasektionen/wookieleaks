@@ -27,7 +27,7 @@ Tyvärr finns en del saker vars historia har försvunnit från mottagningsperson
 Den gamla filen `wookieleaks.html` är borttagen. Om den mot all förmodan skulle behövas, reverta tillbaka denna commit. 
 
 ## Hur deployar man sidan?
-Har du gjort uppdateringar av hemsidan och vill få dem att faktiskt köras? Släng iväg ett mail till datasektionens systemansvariga (d-sys@d.kth.se) och be hen deploya sidan. Fungerade i alla fall 2019.
+Har du gjort uppdateringar av hemsidan och vill få dem att faktiskt köras? Släng iväg ett mail till datasektionens systemansvariga (d-sys@datasektionen.se) och be hen deploya sidan. Fungerade i alla fall 2019.
 
 ## Instruktioner för att deploya
 Skriven av Axel Elmarsson, d-sys 21/22.
