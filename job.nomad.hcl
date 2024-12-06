@@ -28,7 +28,7 @@ job "wookieleaks" {
       }
 
       resources {
-        memory = 50
+        memory = 10
       }
     }
   }
